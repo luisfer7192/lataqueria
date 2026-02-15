@@ -166,6 +166,10 @@
             margin-top: 15px;
         }
 
+        .section-title.no-chili::after {
+            content: '';
+        }
+
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -274,52 +278,121 @@
             margin-top: 10px;
         }
 
-        /* === WHATSAPP CTA === */
-        .cta-section {
+        /* === LOCATIONS === */
+        .locations-section {
             padding: 80px 20px;
             text-align: center;
             background: 
-                radial-gradient(ellipse at 50% 50%, rgba(211,47,47,0.1) 0%, transparent 60%),
+                radial-gradient(ellipse at 30% 50%, rgba(211,47,47,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 50%, rgba(232,168,37,0.06) 0%, transparent 50%),
                 var(--negro);
         }
 
-        .cta-section h2 {
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .location-card {
+            background: rgba(253,246,236,0.03);
+            border: 1px solid rgba(211,47,47,0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(211,47,47,0.5);
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--rojo), var(--dorado));
+        }
+
+        .location-card .pin {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .location-card h3 {
             font-family: 'Archivo Black', sans-serif;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            color: var(--crema);
-            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--rojo);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
         }
 
-        .cta-section p {
-            color: rgba(253,246,236,0.6);
-            font-size: 1.1rem;
-            margin-bottom: 35px;
+        .location-card .zone {
+            font-size: 1rem;
+            color: var(--dorado);
+            font-weight: 700;
+            margin-bottom: 25px;
         }
 
-        .whatsapp-btn {
+        .location-card .phone {
+            font-size: 0.95rem;
+            color: rgba(253,246,236,0.5);
+            margin-bottom: 20px;
+        }
+
+        .location-card .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: #25D366;
-            color: #fff;
-            padding: 18px 40px;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 700;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 25px rgba(37,211,102,0.3);
         }
 
-        .whatsapp-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 35px rgba(37,211,102,0.4);
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.25);
         }
 
-        .whatsapp-btn svg {
-            width: 28px;
-            height: 28px;
+        .btn-whatsapp:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.35);
+        }
+
+        .btn-whatsapp svg {
+            width: 22px;
+            height: 22px;
             fill: white;
+        }
+
+        .btn-maps {
+            background: transparent;
+            color: var(--crema);
+            border: 1px solid rgba(253,246,236,0.2);
+        }
+
+        .btn-maps:hover {
+            transform: scale(1.04);
+            border-color: var(--rojo);
+            color: var(--rojo);
+            background: rgba(211,47,47,0.05);
         }
 
         /* === INSTAGRAM === */
@@ -388,8 +461,10 @@
         @media (max-width: 600px) {
             .menu-grid { grid-template-columns: 1fr; gap: 25px; }
             .specials-grid { grid-template-columns: 1fr; }
+            .locations-grid { grid-template-columns: 1fr; }
             .menu-card { padding: 25px 20px; }
             .logo-img { width: 160px; height: 160px; }
+            .location-card { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -400,7 +475,7 @@
         <img src="transparent-taqueria.png" alt="La Taquería Logo" class="logo-img">
         <h1>La Taquería</h1>
         <p class="subtitle">Tacos al Carbón</p>
-        <p class="location">📍 Pereira, Colombia</p>
+        <p class="location">📍 Pereira & Dosquebradas, Colombia</p>
         <div class="scroll-cta">
             <a href="#menu">
                 Ver menú
@@ -416,7 +491,6 @@
         <h2 class="section-title">Nuestro Menú</h2>
         
         <div class="menu-grid">
-            <!-- TACOS TRADICIONALES -->
             <div class="menu-card">
                 <h3>Tacos Tradicionales</h3>
                 <p class="price-range">1 x $8.000 — 10 x $70.000</p>
@@ -431,7 +505,6 @@
                 </ul>
             </div>
 
-            <!-- TACOS ESPECIALES -->
             <div class="menu-card">
                 <h3>Tacos Especiales</h3>
                 <p class="price-range">1 x $10.000 — 10 x $90.000</p>
@@ -445,7 +518,6 @@
                 </ul>
             </div>
 
-            <!-- BEBIDAS -->
             <div class="menu-card">
                 <h3>Bebidas</h3>
                 <p class="price-range">Refréscate</p>
@@ -459,7 +531,6 @@
             </div>
         </div>
 
-        <!-- ESPECIALES -->
         <div class="specials">
             <div class="specials-grid">
                 <div class="special-item">
@@ -490,14 +561,45 @@
 
     <div class="fire-divider"></div>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>¿Se te antojó?</h2>
-        <p>Haz tu pedido por WhatsApp y recibe tus tacos al +57 3233086368</p>
-        <a href="https://api.whatsapp.com/send?phone=573233086368&fbclid=PAVERFWAP-0RxleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAadLJ7O5Fc9L-AHL8bwV7G2AWN8NBV7_-lr9O36zcNkG_vdZuC7WY5KT2D3Hpg_aem_tNdUFhdooStAVfscIlvGng" class="whatsapp-btn" target="_blank">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Pedir por WhatsApp
-        </a>
+    <!-- LOCATIONS -->
+    <section class="locations-section" id="ubicaciones">
+        <h2 class="section-title no-chili">Encuéntranos</h2>
+
+        <div class="locations-grid">
+            <!-- PEREIRA -->
+            <div class="location-card">
+                <div class="pin">🌮</div>
+                <h3>Pereira</h3>
+                <p class="zone">Corales</p>
+                <p class="phone">📞 320 749 4695</p>
+                <div class="btn-group">
+                    <a href="https://wa.me/573207494695" target="_blank" class="btn btn-whatsapp">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir por WhatsApp
+                    </a>
+                    <a href="https://maps.app.goo.gl/6eNkdPsHags8McyU8" target="_blank" class="btn btn-maps">
+                        📍 Cómo llegar
+                    </a>
+                </div>
+            </div>
+
+            <!-- DOSQUEBRADAS -->
+            <div class="location-card">
+                <div class="pin">🌮</div>
+                <h3>Dosquebradas</h3>
+                <p class="zone">Los Molinos</p>
+                <p class="phone">📞 323 308 6368</p>
+                <div class="btn-group">
+                    <a href="https://wa.me/573233086368" target="_blank" class="btn btn-whatsapp">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir por WhatsApp
+                    </a>
+                    <a href="https://maps.app.goo.gl/P5rpYfrpQnahDSkc7" target="_blank" class="btn btn-maps">
+                        📍 Cómo llegar
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- SOCIAL -->
@@ -509,7 +611,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 La Taquería — Tacos al Carbón — Pereira, Colombia</p>
+        <p>© 2026 La Taquería — Tacos al Carbón — Pereira & Dosquebradas, Colombia</p>
         <a href="terms-privacy.html">Política de Privacidad</a>
     </footer>
 
@@ -524,7 +626,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.menu-card, .special-item').forEach(el => {
+        document.querySelectorAll('.menu-card, .special-item, .location-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
