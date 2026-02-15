@@ -3,635 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Taquería — Tacos al Carbón | Pereira</title>
-    <meta name="description" content="La Taquería - Los mejores tacos al carbón de Pereira. Tacos tradicionales, especiales, birria y más. Pide por WhatsApp.">
+    <title>La Taquería Pereira — Tacos al Carbón | Los Mejores Tacos de Pereira y Dosquebradas</title>
+    <meta name="description" content="La Taquería - Los mejores tacos al carbón de Pereira y Dosquebradas. Tacos tradicionales, especiales, birria, birriamen y más. Pide por WhatsApp. Dos sedes: Corales y Los Molinos.">
+    <meta name="keywords" content="tacos pereira, tacos al carbón pereira, taquería pereira, tacos dosquebradas, birria pereira, birriamen pereira, tacos corales pereira, tacos los molinos dosquebradas, comida mexicana pereira, restaurante mexicano pereira, tacos domicilio pereira, la taquería pereira, tacos de pastor pereira, tacos de camarón pereira, tacos de birria pereira">
+    <meta name="author" content="La Taquería - Tacos al Carbón">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lataqueriapereira.co/">
+    <meta property="og:title" content="La Taquería — Los Mejores Tacos al Carbón de Pereira">
+    <meta property="og:description" content="Tacos tradicionales, especiales, birria y birriamen. Dos sedes: Pereira (Corales) y Dosquebradas (Los Molinos). ¡Pide por WhatsApp!">
+    <meta property="og:image" content="https://lataqueriapereira.co/transparent-taqueria.png">
+    <meta property="og:url" content="https://lataqueriapereira.co/">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="La Taquería - Tacos al Carbón">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Taquería — Tacos al Carbón | Pereira & Dosquebradas">
+    <meta name="twitter:description" content="Los mejores tacos al carbón de Pereira. Tacos tradicionales, especiales, birria y más. ¡Pide por WhatsApp!">
+    <meta name="twitter:image" content="https://lataqueriapereira.co/Menu.jpg">
+    <meta name="geo.region" content="CO-RIS">
+    <meta name="geo.placename" content="Pereira, Risaralda">
+    <meta name="geo.position" content="4.8133;-75.6961">
+    <meta name="ICBM" content="4.8133, -75.6961">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"La Taquería - Tacos al Carbón","image":"https://lataqueriapereira.co/transparent-taqueria.png","url":"https://lataqueriapereira.co","telephone":["+573207494695","+573233086368"],"servesCuisine":["Mexicana","Tacos","Tacos al Carbón","Birria"],"priceRange":"$8.000 - $35.000 COP","address":[{"@type":"PostalAddress","addressLocality":"Pereira","addressRegion":"Risaralda","addressCountry":"CO","name":"La Taquería - Corales"},{"@type":"PostalAddress","addressLocality":"Dosquebradas","addressRegion":"Risaralda","addressCountry":"CO","name":"La Taquería - Los Molinos"}],"hasMenu":{"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Tacos Tradicionales","description":"Pastor, Chorizo, Pollo, Chicharrón, Lengua, Oreja, Hígado encebollado","offers":{"@type":"Offer","priceCurrency":"COP","price":"8000"}},{"@type":"MenuSection","name":"Tacos Especiales","description":"Camarón, Suadero, Tripa, Punta de anca, Asada, Pulpo","offers":{"@type":"Offer","priceCurrency":"COP","price":"10000"}},{"@type":"MenuSection","name":"Especialidades","description":"Burra, Tacos de Birria con caldo, Birriamen con tortillas"},{"@type":"MenuSection","name":"Bebidas","description":"Agua de Horchata, Agua de Tamarindo, Coca-Cola, Agua, Cerveza"}]},"sameAs":["https://www.instagram.com/lataqueria_pereira/"],"areaServed":[{"@type":"City","name":"Pereira"},{"@type":"City","name":"Dosquebradas"}]}</script>
+    <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LocalBusiness","name":"La Taquería Pereira - Corales","image":"https://lataqueriapereira.co/transparent-taqueria.png","telephone":"+573207494695","url":"https://lataqueriapereira.co","address":{"@type":"PostalAddress","addressLocality":"Pereira","addressRegion":"Risaralda","addressCountry":"CO","streetAddress":"Corales"},"geo":{"@type":"GeoCoordinates","latitude":4.8133,"longitude":-75.6961},"hasMap":"https://maps.app.goo.gl/6eNkdPsHags8McyU8"},{"@context":"https://schema.org","@type":"LocalBusiness","name":"La Taquería Dosquebradas - Los Molinos","image":"https://lataqueriapereira.co/transparent-taqueria.png","telephone":"+573233086368","url":"https://lataqueriapereira.co","address":{"@type":"PostalAddress","addressLocality":"Dosquebradas","addressRegion":"Risaralda","addressCountry":"CO","streetAddress":"Los Molinos"},"hasMap":"https://maps.app.goo.gl/P5rpYfrpQnahDSkc7"}]</script>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --rojo: #d32f2f;
-            --rojo-dark: #b71c1c;
-            --rojo-light: #ff6659;
-            --negro: #0a0a0a;
-            --crema: #fdf6ec;
-            --crema-dark: #f5e6cc;
-            --dorado: #e8a825;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--negro);
-            color: var(--crema);
-            overflow-x: hidden;
-        }
-
-        /* === HERO === */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-            background: 
-                radial-gradient(ellipse at 50% 0%, rgba(211,47,47,0.15) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 80%, rgba(232,168,37,0.08) 0%, transparent 40%),
-                var(--negro);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: 
-                repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(211,47,47,0.03) 49px, rgba(211,47,47,0.03) 50px),
-                repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(211,47,47,0.03) 49px, rgba(211,47,47,0.03) 50px);
-            pointer-events: none;
-        }
-
-        .logo-img {
-            width: 220px;
-            height: 220px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            animation: logoIn 1s ease-out;
-            filter: drop-shadow(0 0 40px rgba(211,47,47,0.3));
-        }
-
-        @keyframes logoIn {
-            from { opacity: 0; transform: scale(0.8) translateY(20px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
-        }
-
-        .hero h1 {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            color: var(--rojo);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            line-height: 1;
-            animation: fadeUp 1s ease-out 0.2s both;
-            text-shadow: 0 0 60px rgba(211,47,47,0.3);
-        }
-
-        .hero .subtitle {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: clamp(1rem, 3vw, 1.6rem);
-            color: var(--dorado);
-            letter-spacing: 12px;
-            text-transform: uppercase;
-            margin-top: 8px;
-            animation: fadeUp 1s ease-out 0.4s both;
-        }
-
-        .hero .location {
-            margin-top: 24px;
-            font-size: 1.1rem;
-            color: rgba(253,246,236,0.5);
-            letter-spacing: 2px;
-            animation: fadeUp 1s ease-out 0.6s both;
-        }
-
-        .scroll-cta {
-            margin-top: 50px;
-            animation: fadeUp 1s ease-out 0.8s both;
-        }
-
-        .scroll-cta a {
-            color: var(--rojo);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            transition: color 0.3s;
-        }
-
-        .scroll-cta a:hover { color: var(--rojo-light); }
-
-        .scroll-cta .arrow {
-            width: 20px;
-            height: 20px;
-            border-right: 2px solid var(--rojo);
-            border-bottom: 2px solid var(--rojo);
-            transform: rotate(45deg);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: rotate(45deg) translateY(0); }
-            50% { transform: rotate(45deg) translateY(8px); }
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* === DIVIDER === */
-        .fire-divider {
-            height: 4px;
-            background: linear-gradient(90deg, transparent, var(--rojo), var(--dorado), var(--rojo), transparent);
-            position: relative;
-        }
-
-        /* === MENU === */
-        .menu-section {
-            padding: 80px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            color: var(--rojo);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '🌶️';
-            display: block;
-            font-size: 1.5rem;
-            margin-top: 15px;
-        }
-
-        .section-title.no-chili::after {
-            content: '';
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .menu-card {
-            background: rgba(253,246,236,0.03);
-            border: 1px solid rgba(211,47,47,0.15);
-            border-radius: 16px;
-            padding: 35px 30px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(211,47,47,0.4);
-        }
-
-        .menu-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--rojo), var(--dorado));
-        }
-
-        .menu-card h3 {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 1.4rem;
-            color: var(--rojo);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 6px;
-        }
-
-        .menu-card .price-range {
-            font-size: 0.95rem;
-            color: var(--dorado);
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .menu-card ul {
-            list-style: none;
-        }
-
-        .menu-card ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(253,246,236,0.06);
-            font-size: 1.05rem;
-            color: rgba(253,246,236,0.85);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu-card ul li:last-child { border-bottom: none; }
-
-        .menu-card ul li .item-price {
-            color: var(--dorado);
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        /* === SPECIALS === */
-        .specials {
-            margin-top: 50px;
-        }
-
-        .specials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .special-item {
-            background: linear-gradient(135deg, rgba(211,47,47,0.08), rgba(232,168,37,0.05));
-            border: 1px solid rgba(211,47,47,0.2);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .special-item:hover { transform: scale(1.02); }
-
-        .special-item .name {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 1.2rem;
-            color: var(--crema);
-        }
-
-        .special-item .desc {
-            font-size: 0.9rem;
-            color: rgba(253,246,236,0.5);
-            margin-top: 5px;
-        }
-
-        .special-item .price {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 1.5rem;
-            color: var(--dorado);
-            margin-top: 10px;
-        }
-
-        /* === LOCATIONS === */
-        .locations-section {
-            padding: 80px 20px;
-            text-align: center;
-            background: 
-                radial-gradient(ellipse at 30% 50%, rgba(211,47,47,0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 50%, rgba(232,168,37,0.06) 0%, transparent 50%),
-                var(--negro);
-        }
-
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .location-card {
-            background: rgba(253,246,236,0.03);
-            border: 1px solid rgba(211,47,47,0.2);
-            border-radius: 20px;
-            padding: 40px 30px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .location-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(211,47,47,0.5);
-        }
-
-        .location-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--rojo), var(--dorado));
-        }
-
-        .location-card .pin {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-
-        .location-card h3 {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 1.3rem;
-            color: var(--rojo);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 4px;
-        }
-
-        .location-card .zone {
-            font-size: 1rem;
-            color: var(--dorado);
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-
-        .location-card .phone {
-            font-size: 0.95rem;
-            color: rgba(253,246,236,0.5);
-            margin-bottom: 20px;
-        }
-
-        .location-card .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 700;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.25);
-        }
-
-        .btn-whatsapp:hover {
-            transform: scale(1.04);
-            box-shadow: 0 6px 30px rgba(37,211,102,0.35);
-        }
-
-        .btn-whatsapp svg {
-            width: 22px;
-            height: 22px;
-            fill: white;
-        }
-
-        .btn-maps {
-            background: transparent;
-            color: var(--crema);
-            border: 1px solid rgba(253,246,236,0.2);
-        }
-
-        .btn-maps:hover {
-            transform: scale(1.04);
-            border-color: var(--rojo);
-            color: var(--rojo);
-            background: rgba(211,47,47,0.05);
-        }
-
-        /* === INSTAGRAM === */
-        .social-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .instagram-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--crema);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            padding: 14px 32px;
-            border: 1px solid rgba(253,246,236,0.2);
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-
-        .instagram-link:hover {
-            border-color: var(--rojo);
-            color: var(--rojo);
-            background: rgba(211,47,47,0.05);
-        }
-
-        /* === FOOTER === */
-        footer {
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid rgba(253,246,236,0.06);
-        }
-
-        footer p {
-            color: rgba(253,246,236,0.3);
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-        }
-
-        footer a {
-            color: rgba(253,246,236,0.4);
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.3s;
-        }
-
-        footer a:hover { color: var(--rojo); }
-
-        /* === MENU IMAGE === */
-        .menu-image-section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .menu-image-section img {
-            max-width: 100%;
-            width: 800px;
-            border-radius: 16px;
-            border: 2px solid rgba(211,47,47,0.2);
-            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
-        }
-
-        /* === RESPONSIVE === */
-        @media (max-width: 600px) {
-            .menu-grid { grid-template-columns: 1fr; gap: 25px; }
-            .specials-grid { grid-template-columns: 1fr; }
-            .locations-grid { grid-template-columns: 1fr; }
-            .menu-card { padding: 25px 20px; }
-            .logo-img { width: 160px; height: 160px; }
-            .location-card { padding: 30px 20px; }
-        }
+        :root{--rojo:#d32f2f;--rojo-dark:#b71c1c;--rojo-light:#ff6659;--negro:#0a0a0a;--crema:#fdf6ec;--crema-dark:#f5e6cc;--dorado:#e8a825}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;background:var(--negro);color:var(--crema);overflow-x:hidden}nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 24px;display:flex;justify-content:center;gap:30px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(211,47,47,.1);transform:translateY(-100%);transition:transform .3s}nav.visible{transform:translateY(0)}nav a{color:rgba(253,246,236,.6);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color .3s}nav a:hover{color:var(--rojo)}.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;position:relative;background:radial-gradient(ellipse at 50% 0%,rgba(211,47,47,.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(232,168,37,.08) 0%,transparent 40%),var(--negro)}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 49px,rgba(211,47,47,.03) 49px,rgba(211,47,47,.03) 50px),repeating-linear-gradient(90deg,transparent,transparent 49px,rgba(211,47,47,.03) 49px,rgba(211,47,47,.03) 50px);pointer-events:none}.logo-img{width:220px;height:220px;object-fit:contain;margin-bottom:20px;animation:logoIn 1s ease-out;filter:drop-shadow(0 0 40px rgba(211,47,47,.3))}@keyframes logoIn{from{opacity:0;transform:scale(.8) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(3rem,8vw,6rem);color:var(--rojo);letter-spacing:4px;text-transform:uppercase;line-height:1;animation:fadeUp 1s ease-out .2s both;text-shadow:0 0 60px rgba(211,47,47,.3)}.hero .subtitle{font-family:'Archivo Black',sans-serif;font-size:clamp(1rem,3vw,1.6rem);color:var(--dorado);letter-spacing:12px;text-transform:uppercase;margin-top:8px;animation:fadeUp 1s ease-out .4s both}.hero .location{margin-top:24px;font-size:1.1rem;color:rgba(253,246,236,.5);letter-spacing:2px;animation:fadeUp 1s ease-out .6s both}.hero .tagline{margin-top:12px;font-size:1rem;color:rgba(253,246,236,.35);font-style:italic;animation:fadeUp 1s ease-out .7s both}.scroll-cta{margin-top:50px;animation:fadeUp 1s ease-out .8s both}.scroll-cta a{color:var(--rojo);text-decoration:none;font-size:.9rem;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px;transition:color .3s}.scroll-cta a:hover{color:var(--rojo-light)}.scroll-cta .arrow{width:20px;height:20px;border-right:2px solid var(--rojo);border-bottom:2px solid var(--rojo);transform:rotate(45deg);animation:bounce 2s infinite}@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(8px)}}@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.fire-divider{height:4px;background:linear-gradient(90deg,transparent,var(--rojo),var(--dorado),var(--rojo),transparent)}.about-section{padding:60px 20px;max-width:800px;margin:0 auto;text-align:center}.about-section h2{font-family:'Archivo Black',sans-serif;font-size:1.5rem;color:var(--rojo);margin-bottom:16px}.about-section p{color:rgba(253,246,236,.6);font-size:1.05rem;line-height:1.8}.menu-section{padding:80px 20px;max-width:1100px;margin:0 auto}.section-title{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--rojo);text-align:center;text-transform:uppercase;letter-spacing:4px;margin-bottom:60px;position:relative}.section-title::after{content:'🌶️';display:block;font-size:1.5rem;margin-top:15px}.section-title.no-chili::after{content:''}.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.menu-card{background:rgba(253,246,236,.03);border:1px solid rgba(211,47,47,.15);border-radius:16px;padding:35px 30px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}.menu-card:hover{transform:translateY(-4px);border-color:rgba(211,47,47,.4)}.menu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rojo),var(--dorado))}.menu-card h3{font-family:'Archivo Black',sans-serif;font-size:1.4rem;color:var(--rojo);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}.menu-card .price-range{font-size:.95rem;color:var(--dorado);font-weight:700;margin-bottom:20px}.menu-card ul{list-style:none}.menu-card ul li{padding:8px 0;border-bottom:1px solid rgba(253,246,236,.06);font-size:1.05rem;color:rgba(253,246,236,.85);display:flex;justify-content:space-between;align-items:center}.menu-card ul li:last-child{border-bottom:none}.menu-card ul li .item-price{color:var(--dorado);font-weight:700;font-size:.95rem}.specials{margin-top:50px}.specials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}.special-item{background:linear-gradient(135deg,rgba(211,47,47,.08),rgba(232,168,37,.05));border:1px solid rgba(211,47,47,.2);border-radius:12px;padding:25px;text-align:center;transition:transform .3s}.special-item:hover{transform:scale(1.02)}.special-item .name{font-family:'Archivo Black',sans-serif;font-size:1.2rem;color:var(--crema)}.special-item .desc{font-size:.9rem;color:rgba(253,246,236,.5);margin-top:5px}.special-item .price{font-family:'Archivo Black',sans-serif;font-size:1.5rem;color:var(--dorado);margin-top:10px}.locations-section{padding:80px 20px;text-align:center;background:radial-gradient(ellipse at 30% 50%,rgba(211,47,47,.08) 0%,transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(232,168,37,.06) 0%,transparent 50%),var(--negro)}.locations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;max-width:900px;margin:0 auto}.location-card{background:rgba(253,246,236,.03);border:1px solid rgba(211,47,47,.2);border-radius:20px;padding:40px 30px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}.location-card:hover{transform:translateY(-4px);border-color:rgba(211,47,47,.5)}.location-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--rojo),var(--dorado))}.location-card .pin{font-size:2.5rem;margin-bottom:12px}.location-card h3{font-family:'Archivo Black',sans-serif;font-size:1.3rem;color:var(--rojo);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px}.location-card .zone{font-size:1rem;color:var(--dorado);font-weight:700;margin-bottom:25px}.location-card .phone{font-size:.95rem;color:rgba(253,246,236,.5);margin-bottom:20px}.location-card .btn-group{display:flex;flex-direction:column;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:50px;text-decoration:none;font-size:1rem;font-weight:700;transition:transform .3s,box-shadow .3s}.btn-whatsapp{background:#25D366;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,.25)}.btn-whatsapp:hover{transform:scale(1.04);box-shadow:0 6px 30px rgba(37,211,102,.35)}.btn-whatsapp svg{width:22px;height:22px;fill:#fff}.btn-maps{background:transparent;color:var(--crema);border:1px solid rgba(253,246,236,.2)}.btn-maps:hover{transform:scale(1.04);border-color:var(--rojo);color:var(--rojo);background:rgba(211,47,47,.05)}.social-section{padding:50px 20px;text-align:center}.instagram-link{display:inline-flex;align-items:center;gap:10px;color:var(--crema);text-decoration:none;font-size:1.2rem;font-weight:500;padding:14px 32px;border:1px solid rgba(253,246,236,.2);border-radius:50px;transition:all .3s}.instagram-link:hover{border-color:var(--rojo);color:var(--rojo);background:rgba(211,47,47,.05)}footer{padding:40px 20px;text-align:center;border-top:1px solid rgba(253,246,236,.06)}footer p{color:rgba(253,246,236,.3);font-size:.85rem;margin-bottom:8px}footer a{color:rgba(253,246,236,.4);text-decoration:none;font-size:.8rem;transition:color .3s}footer a:hover{color:var(--rojo)}.menu-image-section{padding:40px 20px;text-align:center}.menu-image-section img{max-width:100%;width:800px;border-radius:16px;border:2px solid rgba(211,47,47,.2);box-shadow:0 10px 50px rgba(0,0,0,.5)}@media(max-width:600px){.menu-grid{grid-template-columns:1fr;gap:25px}.specials-grid{grid-template-columns:1fr}.locations-grid{grid-template-columns:1fr}.menu-card{padding:25px 20px}.logo-img{width:160px;height:160px}.location-card{padding:30px 20px}nav{gap:18px}nav a{font-size:.75rem;letter-spacing:1px}}
     </style>
 </head>
 <body>
-
-    <!-- HERO -->
-    <section class="hero">
-        <img src="transparent-taqueria.png" alt="La Taquería Logo" class="logo-img">
+    <nav id="navbar" aria-label="Navegación principal">
+        <a href="#menu">Menú</a>
+        <a href="#ubicaciones">Ubicaciones</a>
+        <a href="https://www.instagram.com/lataqueria_pereira/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <header class="hero" id="inicio">
+        <img src="transparent-taqueria.png" alt="Logo La Taquería Pereira - Tacos al Carbón" class="logo-img" width="220" height="220">
         <h1>La Taquería</h1>
         <p class="subtitle">Tacos al Carbón</p>
         <p class="location">📍 Pereira & Dosquebradas, Colombia</p>
+        <p class="tagline">Los tacos más chimbas del eje cafetero</p>
         <div class="scroll-cta">
-            <a href="#menu">
-                Ver menú
-                <span class="arrow"></span>
-            </a>
+            <a href="#menu" aria-label="Ver menú de tacos">Ver menú<span class="arrow"></span></a>
         </div>
-    </section>
-
+    </header>
     <div class="fire-divider"></div>
-
-    <!-- MENU -->
+    <section class="about-section">
+        <h2>Los Mejores Tacos al Carbón de Pereira</h2>
+        <p>En La Taquería preparamos auténticos tacos al carbón con los mejores ingredientes. Desde nuestros tacos tradicionales de pastor, chorizo y pollo hasta nuestros tacos especiales de camarón, suadero y pulpo. También preparamos birria con caldo y nuestro famoso birriamen. Visítanos en nuestras dos sedes en Pereira (Corales) y Dosquebradas (Los Molinos), o pide por WhatsApp para llevar.</p>
+    </section>
+    <div class="fire-divider"></div>
+    <main>
     <section class="menu-section" id="menu">
         <h2 class="section-title">Nuestro Menú</h2>
-        
         <div class="menu-grid">
-            <div class="menu-card">
-                <h3>Tacos Tradicionales</h3>
-                <p class="price-range">1 x $8.000 — 10 x $70.000</p>
-                <ul>
-                    <li>Pastor</li>
-                    <li>Chorizo</li>
-                    <li>Pollo</li>
-                    <li>Chicharrón</li>
-                    <li>Lengua</li>
-                    <li>Oreja</li>
-                    <li>Hígado encebollado</li>
-                </ul>
-            </div>
-
-            <div class="menu-card">
-                <h3>Tacos Especiales</h3>
-                <p class="price-range">1 x $10.000 — 10 x $90.000</p>
-                <ul>
-                    <li>Camarón</li>
-                    <li>Suadero</li>
-                    <li>Tripa</li>
-                    <li>Punta de anca</li>
-                    <li>Asada</li>
-                    <li>Pulpo</li>
-                </ul>
-            </div>
-
-            <div class="menu-card">
-                <h3>Bebidas</h3>
-                <p class="price-range">Refréscate</p>
-                <ul>
-                    <li>Agua de Horchata <span class="item-price">$10.000</span></li>
-                    <li>Agua de Tamarindo <span class="item-price">$10.000</span></li>
-                    <li>Coca-Cola <span class="item-price">$6.000</span></li>
-                    <li>Agua <span class="item-price">$5.000</span></li>
-                    <li>Cerveza <span class="item-price">$10.000</span></li>
-                </ul>
-            </div>
+            <article class="menu-card"><h3>Tacos Tradicionales</h3><p class="price-range">1 x $8.000 — 10 x $70.000</p><ul><li>Pastor</li><li>Chorizo</li><li>Pollo</li><li>Chicharrón</li><li>Lengua</li><li>Oreja</li><li>Hígado encebollado</li></ul></article>
+            <article class="menu-card"><h3>Tacos Especiales</h3><p class="price-range">1 x $10.000 — 10 x $90.000</p><ul><li>Camarón</li><li>Suadero</li><li>Tripa</li><li>Punta de anca</li><li>Asada</li><li>Pulpo</li></ul></article>
+            <article class="menu-card"><h3>Bebidas</h3><p class="price-range">Refréscate</p><ul><li>Agua de Horchata <span class="item-price">$10.000</span></li><li>Agua de Tamarindo <span class="item-price">$10.000</span></li><li>Coca-Cola <span class="item-price">$6.000</span></li><li>Agua <span class="item-price">$5.000</span></li><li>Cerveza <span class="item-price">$10.000</span></li></ul></article>
         </div>
-
-        <div class="specials">
-            <div class="specials-grid">
-                <div class="special-item">
-                    <p class="name">🫔 Burra</p>
-                    <p class="desc">Camarón +$5.000</p>
-                    <p class="price">$25.000</p>
-                </div>
-                <div class="special-item">
-                    <p class="name">🌮 3 Tacos de Birria</p>
-                    <p class="desc">Con caldo</p>
-                    <p class="price">$33.000</p>
-                </div>
-                <div class="special-item">
-                    <p class="name">🍜 Birriamen</p>
-                    <p class="desc">Con tortillas</p>
-                    <p class="price">$35.000</p>
-                </div>
-            </div>
-        </div>
+        <div class="specials"><div class="specials-grid">
+            <article class="special-item"><p class="name">🫔 Burra</p><p class="desc">Camarón +$5.000</p><p class="price">$25.000</p></article>
+            <article class="special-item"><p class="name">🌮 3 Tacos de Birria</p><p class="desc">Con caldo</p><p class="price">$33.000</p></article>
+            <article class="special-item"><p class="name">🍜 Birriamen</p><p class="desc">Con tortillas</p><p class="price">$35.000</p></article>
+        </div></div>
     </section>
-
+    </main>
     <div class="fire-divider"></div>
-
-    <!-- MENU IMAGE -->
     <section class="menu-image-section">
-        <img src="Menu.jpg" alt="Menú completo La Taquería">
+        <img src="Menu.jpg" alt="Menú completo La Taquería Pereira - Tacos tradicionales, especiales, birria, bebidas y precios" width="800" height="450" loading="lazy">
     </section>
-
     <div class="fire-divider"></div>
-
-    <!-- LOCATIONS -->
     <section class="locations-section" id="ubicaciones">
         <h2 class="section-title no-chili">Encuéntranos</h2>
-
         <div class="locations-grid">
-            <!-- PEREIRA -->
-            <div class="location-card">
-                <div class="pin">🌮</div>
-                <h3>Pereira</h3>
-                <p class="zone">Corales</p>
-                <p class="phone">📞 320 749 4695</p>
-                <div class="btn-group">
-                    <a href="https://wa.me/573207494695" target="_blank" class="btn btn-whatsapp">
-                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Pedir por WhatsApp
-                    </a>
-                    <a href="https://maps.app.goo.gl/6eNkdPsHags8McyU8" target="_blank" class="btn btn-maps">
-                        📍 Cómo llegar
-                    </a>
-                </div>
-            </div>
-
-            <!-- DOSQUEBRADAS -->
-            <div class="location-card">
-                <div class="pin">🌮</div>
-                <h3>Dosquebradas</h3>
-                <p class="zone">Los Molinos</p>
-                <p class="phone">📞 323 308 6368</p>
-                <div class="btn-group">
-                    <a href="https://wa.me/573233086368" target="_blank" class="btn btn-whatsapp">
-                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Pedir por WhatsApp
-                    </a>
-                    <a href="https://maps.app.goo.gl/P5rpYfrpQnahDSkc7" target="_blank" class="btn btn-maps">
-                        📍 Cómo llegar
-                    </a>
-                </div>
-            </div>
+            <article class="location-card"><div class="pin">🌮</div><h3>Pereira</h3><p class="zone">Corales</p><p class="phone">📞 <a href="tel:+573207494695" style="color:inherit;text-decoration:none">320 749 4695</a></p><div class="btn-group"><a href="https://wa.me/573207494695" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="Pedir tacos por WhatsApp a La Taquería Pereira Corales"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Pedir por WhatsApp</a><a href="https://maps.app.goo.gl/6eNkdPsHags8McyU8" target="_blank" rel="noopener" class="btn btn-maps" aria-label="Cómo llegar a La Taquería Corales Pereira">📍 Cómo llegar</a></div></article>
+            <article class="location-card"><div class="pin">🌮</div><h3>Dosquebradas</h3><p class="zone">Los Molinos</p><p class="phone">📞 <a href="tel:+573233086368" style="color:inherit;text-decoration:none">323 308 6368</a></p><div class="btn-group"><a href="https://wa.me/573233086368" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="Pedir tacos por WhatsApp a La Taquería Dosquebradas Los Molinos"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Pedir por WhatsApp</a><a href="https://maps.app.goo.gl/P5rpYfrpQnahDSkc7" target="_blank" rel="noopener" class="btn btn-maps" aria-label="Cómo llegar a La Taquería Los Molinos Dosquebradas">📍 Cómo llegar</a></div></article>
         </div>
     </section>
-
-    <!-- SOCIAL -->
     <section class="social-section">
-        <a href="https://www.instagram.com/lataqueria_pereira/" target="_blank" class="instagram-link">
-            📸 @lataqueria_pereira
-        </a>
+        <a href="https://www.instagram.com/lataqueria_pereira/" target="_blank" rel="noopener" class="instagram-link" aria-label="Seguir a La Taquería Pereira en Instagram">📸 @lataqueria_pereira</a>
     </section>
-
-    <!-- FOOTER -->
     <footer>
         <p>© 2026 La Taquería — Tacos al Carbón — Pereira & Dosquebradas, Colombia</p>
         <a href="terms-privacy.html">Política de Privacidad</a>
     </footer>
-
-    <!-- SCROLL ANIMATION -->
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.menu-card, .special-item, .location-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
+        const navbar=document.getElementById('navbar'),hero=document.querySelector('.hero');
+        new IntersectionObserver(e=>{e.forEach(e=>{navbar.classList.toggle('visible',!e.isIntersecting)})},{threshold:.1}).observe(hero);
+        const observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.style.opacity='1',e.target.style.transform='translateY(0)')})},{threshold:.1});
+        document.querySelectorAll('.menu-card,.special-item,.location-card,.about-section').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .6s ease,transform .6s ease';observer.observe(el)});
     </script>
 </body>
 </html>
